@@ -9,6 +9,7 @@ public class Speaker {
 		super();
 		this.brand = brand;
 		this.maxVolume = maxVolume;
+		System.out.printf("--%s 스피커 생성 ",this.brand);
 	}
 	
 	public String getBrand() {

@@ -4,5 +4,13 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
 	
 	<!-- bean 등록/ 객체화는  -->
-	<bean id="mitv" class="com.spring.first.MiTv"></bean>
+	<bean id="mitv" class="com.spring.first.MiTv">
+		<!--<constructor-arg ref="speaker"></constructor-arg> -->
+		<property name="speaker" ref="speaker"></property>
+	</bean>
+	<!-- spring은 기본scope가 simgleton이다. 새로운 객체를 만드려면 prototype  -->
+	<bean id="speaker" class="com.spring.first.HamanSpeaker">
+		<constructor-arg value="30"></constructor-arg>
+	</bean>
+	<!-- 기본생성자외에 생성자가 존재 할 경우에는 constructor-arg태그에 값을 줘야함? -->
 </beans>

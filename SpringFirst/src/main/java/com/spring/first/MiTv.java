@@ -12,4 +12,10 @@ public class MiTv {
 		System.out.println("MiTv speaker생성자");
 		this.speaker = speaker;
 	}
+	public void setSpeaker(Speaker speaker) {
+		this.speaker = speaker;
+	}
+	public void volumeUp() {
+		speaker.volumeUp();
+	}
 }

@@ -11,5 +11,6 @@ public class SpringMain {
 		MiTv tv1 = ctx.getBean("mitv",MiTv.class); 
 		// (bean id , return 타입) return을 안적으려면 형변환 해주면 ㅇㅋ
 		System.out.println("tv1 : " + tv1);
+		tv1.volumeUp();
 	}
 }
